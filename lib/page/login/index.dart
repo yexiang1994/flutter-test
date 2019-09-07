@@ -8,7 +8,8 @@ import './../../commonPage/button/defaultBtn.dart';
 
 class Login extends StatelessWidget {
 
-  void doLogin(){
+  void doLogin(context){
+    Navigator.pushNamed(context, "bottomBar");
     print("登录");
   }
   
@@ -37,7 +38,7 @@ class Login extends StatelessWidget {
               )),
               ComInput(label: "用户名",value: "", placeholder: "请输入用户名...",),
               ComInput(label: "密码",value: "", placeholder: "请输入密码...",),
-              DefaultBtn(text: "登录", onPrss: doLogin,btnSize: BtnSize.large, margin: EdgeInsets.only(top: 80),)
+              DefaultBtn(text: "登录", onPrss: ()=>doLogin(context),btnSize: BtnSize.large, margin: EdgeInsets.only(top: 80),)
             ],
           ),
       )

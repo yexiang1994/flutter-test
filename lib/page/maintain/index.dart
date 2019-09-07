@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-class Site extends StatelessWidget {
+class Maintain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         Container(
-          child: Text("站点"),
+          child: Text("维修站点"),
         ),
       ],);
   }
