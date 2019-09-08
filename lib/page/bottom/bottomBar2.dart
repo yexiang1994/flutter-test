@@ -15,29 +15,23 @@ class _BottomBarState extends State<BottomBar> {
       appBar: AppBar(
         title: Text("主页"),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.accessibility),title: Text("站点")),
-          BottomNavigationBarItem(icon: Icon(Icons.add_alarm),title: Text("维修")),
-        ]
+      bottomNavigationBar: 
+      Container(
+        decoration: BoxDecoration(color: Colors.green),
+        height: 50,
+        child: TabBar(
+          labelStyle: TextStyle(fontSize: 10,height: 0),
+          tabs: <Widget>[
+          Tab(
+            icon: Icon(Icons.ac_unit, size: 18),
+            text: "站点",
+          ),
+          Tab(
+            icon: Icon(Icons.access_alarm, size: 18),
+            text: "维修",
+          )
+        ],),
       ),
-      // Container(
-      //   decoration: BoxDecoration(color: Colors.green),
-      //   height: 50,
-      //   child: 
-        // child: TabBar(
-        //   labelStyle: TextStyle(fontSize: 10,height: 0),
-        //   tabs: <Widget>[
-        //   Tab(
-        //     icon: Icon(Icons.ac_unit, size: 18),
-        //     text: "站点",
-        //   ),
-        //   Tab(
-        //     icon: Icon(Icons.access_alarm, size: 18),
-        //     text: "维修",
-        //   )
-        // ],),
-      // ),
       body: TabBarView(children: <Widget>[
         Site(),
         Maintain()

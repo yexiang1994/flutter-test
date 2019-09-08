@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import './page/login/index.dart';
 import 'package:flutter/rendering.dart';
 import './page/bottom/bottomBar.dart';
+// import './page/bottom/bottomBar2.dart';
 void main() {
   // debugPaintSizeEnabled = true;
   runApp(MyApp());

@@ -21,16 +21,17 @@ class _BottomBarState extends State<BottomBar> {
     return Container(
       height: 300,
       decoration: BoxDecoration(color: Colors.white),
-      child: Container(
-        padding: EdgeInsets.only(top:40),
         child: Scaffold(
-        // appBar: AppBar(
-        //   title: Text("主页"),
-        // ),
+        appBar: AppBar(
+          title: Text("主页"),
+        ),
         body: list[_index],
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.brown,
+          backgroundColor: Colors.blue,
           iconSize: 15,
+          // fixedColor: Colors.white,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.black,
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.accessibility),title: Text("站点")),
             BottomNavigationBarItem(icon: Icon(Icons.add_alarm),title: Text("维修")),
@@ -42,6 +43,6 @@ class _BottomBarState extends State<BottomBar> {
             });
           },
         ),
-      )));
+      ));
   }
 }
