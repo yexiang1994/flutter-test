@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import './page/login/index.dart';
 import 'package:flutter/rendering.dart';
 import './page/bottom/bottomBar.dart';
+import './page/unknowPage/index.dart';
 // import './page/bottom/bottomBar2.dart';
 void main() {
   // debugPaintSizeEnabled = true;
@@ -20,6 +21,9 @@ class MyApp extends StatelessWidget{
         'login': (context) => Login(),
         'bottomBar':(context) => BottomBar()
       },
+      onUnknownRoute: (RouteSettings setting) => MaterialPageRoute(
+        builder: (context) => UnKnowPage(),
+      ),
       home: Login(),
     );
   }
