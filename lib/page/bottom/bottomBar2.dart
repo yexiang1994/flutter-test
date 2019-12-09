@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './../site/index.dart';
-import './../maintain/index.dart';
+import './../main/index.dart';
+import './../shopping/index.dart';
 class BottomBar extends StatefulWidget {
   @override
   _BottomBarState createState() => _BottomBarState();
@@ -33,8 +33,8 @@ class _BottomBarState extends State<BottomBar> {
         ],),
       ),
       body: TabBarView(children: <Widget>[
-        Site(),
-        Maintain()
+        Main(),
+        Shopping()
       ]),
     )
     );

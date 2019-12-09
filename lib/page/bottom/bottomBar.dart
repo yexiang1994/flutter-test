@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import './../site/index.dart';
-import './../maintain/index.dart';
+import './../main/index.dart';
+import './../shopping/index.dart';
+import './../product/index.dart';
 class BottomBar extends StatefulWidget {
   @override
   _BottomBarState createState() => _BottomBarState();
@@ -12,8 +13,9 @@ class _BottomBarState extends State<BottomBar> {
   @override
   void initState(){
     list
-      ..add(Site())
-      ..add(Maintain());
+      ..add(Main())
+      ..add(Product())
+      ..add(Shopping());
       super.initState();
   }
   @override
@@ -31,10 +33,11 @@ class _BottomBarState extends State<BottomBar> {
           iconSize: 15,
           // fixedColor: Colors.white,
           selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.black,
+          unselectedItemColor: Colors.grey,
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.accessibility),title: Text("站点")),
-            BottomNavigationBarItem(icon: Icon(Icons.add_alarm),title: Text("维修")),
+            BottomNavigationBarItem(icon: Icon(IconData(0xe610,fontFamily: "Iconfont" )),title: Text("首页")),
+            BottomNavigationBarItem(icon: Icon(IconData(0xe630, fontFamily: "Iconfont")),title: Text("全部商品")),
+            BottomNavigationBarItem(icon: Icon(IconData(0xe608, fontFamily: "IconFont")),title: Text("购物车"))
           ],
           currentIndex: _index,
           onTap: (int i){

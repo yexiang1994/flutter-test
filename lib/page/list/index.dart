@@ -40,13 +40,6 @@ class _ListDioState extends State<ListDio> with AutomaticKeepAliveClientMixin{
     );
   }
   getMovies () async{ 
-    var res =await dio.get("http://www.liulongbin.top:3005/api/v2/movie/top250?start=0&count=10");
-    var datas = res.data;
-    print(data);
-    setState(() {
-     data=datas["subjects"];
-    //  dd = datas[]
-    //  print(data);
-    });
+     
   }
 }
