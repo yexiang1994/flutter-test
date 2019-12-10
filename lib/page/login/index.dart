@@ -1,5 +1,3 @@
-import 'dart:math';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:tests/enum/btnSize.dart';
 import './../../commonPage/input/index.dart';
