@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './../main/index.dart';
 import './../shopping/index.dart';
 import './../product/index.dart';
+import './../mine/index.dart';
 class BottomBar extends StatefulWidget {
   @override
   _BottomBarState createState() => _BottomBarState();
@@ -15,7 +16,8 @@ class _BottomBarState extends State<BottomBar> {
     list
       ..add(Main())
       ..add(Product())
-      ..add(Shopping());
+      ..add(Shopping())
+      ..add(Mine());
       super.initState();
   }
   @override
@@ -29,15 +31,17 @@ class _BottomBarState extends State<BottomBar> {
         ),
         body: list[_index],
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.blue,
+          backgroundColor: Color.fromRGBO(245,245,245,1),
           iconSize: 15,
+          showUnselectedLabels: true,
           // fixedColor: Colors.white,
-          selectedItemColor: Colors.white,
+          selectedItemColor: Color.fromRGBO(254,69,67, 1),
           unselectedItemColor: Colors.grey,
           items: [
-            BottomNavigationBarItem(icon: Icon(IconData(0xe610,fontFamily: "Iconfont" )),title: Text("首页")),
-            BottomNavigationBarItem(icon: Icon(IconData(0xe630, fontFamily: "Iconfont")),title: Text("全部商品")),
-            BottomNavigationBarItem(icon: Icon(IconData(0xe608, fontFamily: "IconFont")),title: Text("购物车"))
+            BottomNavigationBarItem(icon: Icon(IconData(0xe610,fontFamily: "Iconfont" ), size: 22.0,),title: Text("首页")),
+            BottomNavigationBarItem(icon: Icon(IconData(0xe630, fontFamily: "Iconfont"), size: 20.0,),title: Text("全部商品")),
+            BottomNavigationBarItem(icon: Icon(IconData(0xe608, fontFamily: "IconFont"), size: 22.0,),title: Text("购物车")),
+            BottomNavigationBarItem(icon: Icon(IconData(0xe614, fontFamily: "IconFont"), size: 22.0,),title: Text("我的"))
           ],
           currentIndex: _index,
           onTap: (int i){

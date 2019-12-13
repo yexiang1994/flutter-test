@@ -1,9 +1,9 @@
-import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:tests/enum/btnSize.dart';
-import './../../commonPage/input/index.dart';
-import './../../commonPage/button/defaultBtn.dart';
+import 'package:tests/commonPage/index.dart';
+// import './../../commonPage/input/index.dart';
+// import './../../commonPage/button/defaultBtn.dart';
 
 
 class Login extends StatelessWidget {
