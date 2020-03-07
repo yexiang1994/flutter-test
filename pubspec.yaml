@@ -27,7 +27,9 @@ dependencies:
   mobx: ^0.3.7
   dio: ^2.1.16
   udp: ^3.0.2
-  
+  path_provider: ^1.6.5
+  permission_handler: ^4.3.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
